@@ -4,12 +4,12 @@ using namespace std;
 #include "./gdal/gdal_priv.h"
 #pragma comment(lib, "gdal_i.lib")
 
-float trans1[3][3] = {1/3, 1/3, 1/3,      
-						-sqrt(2*1.0)/6, -sqrt(2*1.0)/6, sqrt(2*1.0)/3,    
-						1/sqrt(2*1.0), -1/sqrt(2*1.0), 0};
-float trans2[3][3] = {1, -1/sqrt(2*1.0), 1/sqrt(2*1.0),      
-						1, -1/sqrt(2*1.0), -1/sqrt(2*1.0),  
-						1, sqrt(2*1.0), 0};
+//float trans1[3][3] = {1/3, 1/3, 1/3,      
+//						-sqrt(2*1.0)/6, -sqrt(2*1.0)/6, sqrt(2*1.0)/3,    
+//						1/sqrt(2*1.0), -1/sqrt(2*1.0), 0};
+//float trans2[3][3] = {1, -1/sqrt(2*1.0), 1/sqrt(2*1.0),      
+//						1, -1/sqrt(2*1.0), -1/sqrt(2*1.0),  
+//						1, sqrt(2*1.0), 0};
 int main(){
 	//ÊäÈëÍ¼Ïñ
 	GDALDataset* picture1_in;
@@ -22,7 +22,7 @@ int main(){
 	//ÊäÈëÊä³öÍ¼ÏñÂ·¾¶
 	char* picture1_path = "American_MUL.bmp";
 	char* picture2_path = "American_PAN.bmp";
-	char* out_picture_path = "American_FUS.bmp";
+	char* out_picture_path = "American_FUS1.bmp";
 
 	//×¢²áÇý¶¯
 	GDALAllRegister();
@@ -33,7 +33,7 @@ int main(){
 	imgXlen = picture1_in->GetRasterXSize();
 	imgYlen = picture1_in->GetRasterYSize();
 	bandNum = picture1_in->GetRasterCount();
-	cout << imgXlen << endl << imgYlen;
+	//cout << imgXlen << endl << imgYlen;
 	
 	//Í¼ÏñÄÚ´æ´æ´¢
 	float *R, *G, *B; 
@@ -61,7 +61,6 @@ int main(){
 	picture2_in->GetRasterBand(1)->RasterIO(GF_Read,
 			0, 0, imgXlen, imgYlen, buffTmp, imgXlen, imgYlen, GDT_Float32, 0, 0);
 	for(int i = 0; i < imgXlen * imgYlen; i++){
-		//I[i] = 1/3 * R[i] + 1/3 * G[i] + 1/3 * B[i];
 		H[i] = -sqrt(2.0f)/6.0f*R[i]-sqrt(2.0f)/6.0f*G[i]+sqrt(2.0f)/3.0f*B[i];
 		S[i] = 1.0f/sqrt(2.0f)*R[i]-1/sqrt(2.0f)*G[i];
 

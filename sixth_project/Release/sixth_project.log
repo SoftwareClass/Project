@@ -1,11 +1,12 @@
-﻿  main_square_256.cpp
-main_square_256.cpp(13): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  main_row_256.cpp
+  main_square_256.cpp
+main_square_256.cpp(11): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(240): note: 参见“freopen”的声明
-    正在创建库 C:\Users\www\Desktop\sixth_project\Release\sixth_project.lib 和对象 C:\Users\www\Desktop\sixth_project\Release\sixth_project.exp
+    正在创建库 E:\OUC\学习资料\大三上\SoftWareClass\github\Project\sixth_project\Release\sixth_project.lib 和对象 E:\OUC\学习资料\大三上\SoftWareClass\github\Project\sixth_project\Release\sixth_project.exp
   正在生成代码
-  1 of 444 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  441 of 444 functions (99.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
-  sixth_project.vcxproj -> C:\Users\www\Desktop\sixth_project\Release\sixth_project.exe
-  sixth_project.vcxproj -> C:\Users\www\Desktop\sixth_project\Release\sixth_project.pdb (Full PDB)
+  sixth_project.vcxproj -> E:\OUC\学习资料\大三上\SoftWareClass\github\Project\sixth_project\Release\sixth_project.exe
+  sixth_project.vcxproj -> E:\OUC\学习资料\大三上\SoftWareClass\github\Project\sixth_project\Release\sixth_project.pdb (Full PDB)
